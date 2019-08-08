@@ -47,7 +47,7 @@ extension ADView {
         addSubview(collectionView)
     }
     
-    public func show() {
+    public func showAtBottomScreen() {
         //        guard let window = UIApplication.shared.keyWindow, window.subviews.first(where: { $0.tag == 2395 }) == nil else { return }
         //        window.addSubview(self)
         
