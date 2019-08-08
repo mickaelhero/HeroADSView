@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import Her
+import HeroADSView
 
 class ViewController: UIViewController {
-
-    let adView = ADView()
     
     let adItem = [
         ADItem(image: URL(string: "https://www.citationbonheur.fr/wp-content/uploads/2018/09/L_influence_du_paysage_sur_le_bonheur.jpg")!, title: "Title", website: URL(string: "https://google.com")!)
@@ -20,13 +18,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        adView.data = adItem
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        adView.showAtBottomScreen()
-        adView.frame.origin.y = 14
+        
+        let adView = ADView()
+        adView.data = adItem
+        adView.frame = CGRect(x: 50, y: 50, width: 100, height: 150)
+        view.addSubview(adView)
+
+        let adView1 = ADView()
+        adView1.data = adItem
+        adView1.showAtBottomScreen()
     }
     
 }

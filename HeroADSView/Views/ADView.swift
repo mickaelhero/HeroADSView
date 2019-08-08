@@ -12,6 +12,17 @@ public class ADView: UIView {
     
     var collectionView: UICollectionView?
     
+    public override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set {
+            super.frame = newValue
+            collectionView?.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+            collectionView?.reloadData()
+        }
+    }
+    
     public var data = [ADItem]() {
         didSet {
             collectionView?.reloadData()
@@ -37,9 +48,7 @@ public class ADView: UIView {
 extension ADView {
     
     func setup() {
-        tag = 2395
         frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 4)
-        frame.origin = CGPoint(x: 0, y: UIScreen.main.bounds.height - frame.height)
         
         collectionView = createCollectionView()
         
@@ -48,10 +57,12 @@ extension ADView {
     }
     
     public func showAtBottomScreen() {
+        frame.origin = CGPoint(x: 0, y: UIScreen.main.bounds.height - frame.height)
+
         //        guard let window = UIApplication.shared.keyWindow, window.subviews.first(where: { $0.tag == 2395 }) == nil else { return }
         //        window.addSubview(self)
         
-        guard let topViewController = UIApplication.getTopViewController(), topViewController.view.subviews.first(where: { $0.tag == 2395 }) == nil else { return }
+        guard let topViewController = UIApplication.getTopViewController() else { return }
         topViewController.view.addSubview(self)
     }
     
@@ -60,7 +71,7 @@ extension ADView {
 
 // MARK: Set collectionView and delegate methods
 
-extension ADView: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ADView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
@@ -87,6 +98,11 @@ extension ADView: UICollectionViewDataSource, UICollectionViewDelegate {
         //        collectionView.isHidden = true
         
         topViewController.present(webView, animated: true)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = frame.height / 1.3
+        return CGSize(width: size, height: size)
     }
     
     private func createCollectionView() -> UICollectionView {
