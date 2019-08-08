@@ -15,6 +15,13 @@
 		D77F088822FC116E00C47CE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77F088622FC116E00C47CE7 /* Main.storyboard */; };
 		D77F088A22FC116F00C47CE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77F088922FC116F00C47CE7 /* Assets.xcassets */; };
 		D77F088D22FC116F00C47CE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77F088B22FC116F00C47CE7 /* LaunchScreen.storyboard */; };
+		D77F089422FC145500C47CE7 /* HA+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F089322FC145500C47CE7 /* HA+UIView.swift */; };
+		D77F089622FC147E00C47CE7 /* HA+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F089522FC147E00C47CE7 /* HA+UIApplication.swift */; };
+		D77F089822FC149600C47CE7 /* HA+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F089722FC149600C47CE7 /* HA+General.swift */; };
+		D77F089A22FC154600C47CE7 /* HA+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F089922FC154600C47CE7 /* HA+UIImageView.swift */; };
+		D77F089D22FC157600C47CE7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F089C22FC157600C47CE7 /* WebViewController.swift */; };
+		D77F08A022FC159600C47CE7 /* ADItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F089F22FC159600C47CE7 /* ADItem.swift */; };
+		D77F08A322FC15B700C47CE7 /* ADView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F08A222FC15B700C47CE7 /* ADView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +48,13 @@
 		D77F088922FC116F00C47CE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D77F088C22FC116F00C47CE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D77F088E22FC116F00C47CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D77F089322FC145500C47CE7 /* HA+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HA+UIView.swift"; sourceTree = "<group>"; };
+		D77F089522FC147E00C47CE7 /* HA+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HA+UIApplication.swift"; sourceTree = "<group>"; };
+		D77F089722FC149600C47CE7 /* HA+General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HA+General.swift"; sourceTree = "<group>"; };
+		D77F089922FC154600C47CE7 /* HA+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HA+UIImageView.swift"; sourceTree = "<group>"; };
+		D77F089C22FC157600C47CE7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D77F089F22FC159600C47CE7 /* ADItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADItem.swift; sourceTree = "<group>"; };
+		D77F08A222FC15B700C47CE7 /* ADView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,10 @@
 		D77F086422FC108F00C47CE7 /* HeroADSView */ = {
 			isa = PBXGroup;
 			children = (
+				D77F08A122FC15A800C47CE7 /* Views */,
+				D77F089E22FC158700C47CE7 /* Models */,
+				D77F089B22FC155E00C47CE7 /* Controllers */,
+				D77F089222FC142F00C47CE7 /* Extensions */,
 				D77F086522FC108F00C47CE7 /* HeroADSView.h */,
 				D77F086622FC108F00C47CE7 /* Info.plist */,
 			);
@@ -118,6 +136,41 @@
 				D77F088E22FC116F00C47CE7 /* Info.plist */,
 			);
 			path = HeroADSViewExamples;
+			sourceTree = "<group>";
+		};
+		D77F089222FC142F00C47CE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D77F089322FC145500C47CE7 /* HA+UIView.swift */,
+				D77F089522FC147E00C47CE7 /* HA+UIApplication.swift */,
+				D77F089722FC149600C47CE7 /* HA+General.swift */,
+				D77F089922FC154600C47CE7 /* HA+UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D77F089B22FC155E00C47CE7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D77F089C22FC157600C47CE7 /* WebViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D77F089E22FC158700C47CE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D77F089F22FC159600C47CE7 /* ADItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D77F08A122FC15A800C47CE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D77F08A222FC15B700C47CE7 /* ADView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +252,7 @@
 				TargetAttributes = {
 					D77F086122FC108F00C47CE7 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					D77F086A22FC108F00C47CE7 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -260,6 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77F089822FC149600C47CE7 /* HA+General.swift in Sources */,
+				D77F089422FC145500C47CE7 /* HA+UIView.swift in Sources */,
+				D77F089622FC147E00C47CE7 /* HA+UIApplication.swift in Sources */,
+				D77F08A022FC159600C47CE7 /* ADItem.swift in Sources */,
+				D77F089D22FC157600C47CE7 /* WebViewController.swift in Sources */,
+				D77F089A22FC154600C47CE7 /* HA+UIImageView.swift in Sources */,
+				D77F08A322FC15B700C47CE7 /* ADView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +496,7 @@
 		D77F087722FC108F00C47CE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -452,6 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.heroapps.HeroADSView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,6 +523,7 @@
 		D77F087822FC108F00C47CE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -485,6 +549,7 @@
 		D77F087A22FC108F00C47CE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RH9M4FMVEC;
 				INFOPLIST_FILE = HeroADSViewTests/Info.plist;
@@ -503,6 +568,7 @@
 		D77F087B22FC108F00C47CE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RH9M4FMVEC;
 				INFOPLIST_FILE = HeroADSViewTests/Info.plist;
