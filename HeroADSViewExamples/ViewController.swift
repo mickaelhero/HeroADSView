@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import HeroADSView
+import Her
 
 class ViewController: UIViewController {
 
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         adView.showAtBottomScreen()
+        adView.frame.origin.y = 14
     }
     
 }
