@@ -1,0 +1,11 @@
+framework module HeroADSView {
+  umbrella header "HeroADSView.h"
+
+  export *
+  module * { export * }
+}
+
+module HeroADSView.Swift {
+    header "HeroADSView-Swift.h"
+    requires objc
+}
