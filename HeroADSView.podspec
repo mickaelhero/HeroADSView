@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
   spec.name         = "HeroADSView"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.3"
   spec.summary      = "My best description HeroADSView."
   spec.homepage     = "https://github.com/mickaelhero/HeroADSView"
 
